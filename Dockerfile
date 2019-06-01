@@ -1,12 +1,12 @@
-FROM arm64v8/alpine
+FROM alpine
 
-ENV RPC_SECRET=secret
+ENV RPC_SECRET=skywirex
 ENV DOMAIN=0.0.0.0:80
 ENV PUID=0
 ENV PGID=0
 
 RUN apk update \
-    && apk add --no-cache --update aria2 su-exec
+    && apk add --no-cache aria2 su-exec
 
 WORKDIR /aria2
 

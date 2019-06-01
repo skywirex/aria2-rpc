@@ -30,7 +30,7 @@ docker run -d --name aria2-rpc -p 6800:6800 skywirex/aria2-rpc
 docker run -d \
   --name aria2-rpc \
   -p 6800:6800 \
-  -v /DOWNLOAD_DIR:/aria2/data \
+  -v ~/downloads:/aria2/data \
   -v /CONFIG_DIR:/aria2/conf \
   -e PUID=1000 \
   -e PGID=1000 \
@@ -38,7 +38,7 @@ docker run -d \
   skywirex/aria2-rpc
 ```
 
-> Note: defaut rpc secret is `secret`. You can also remove secret by overriding `RPC_SECRET` with empty string when running your container:
+> Note: defaut rpc secret is `skywirex`. You can also remove secret by overriding `RPC_SECRET` with empty string when running your container:
 
 ```bash
 -e RPC_SECRET=""
