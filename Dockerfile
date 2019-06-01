@@ -1,4 +1,4 @@
-FROM alpine
+FROM arm64v8/alpine
 
 ENV RPC_SECRET=skywirex
 ENV DOMAIN=0.0.0.0:80
