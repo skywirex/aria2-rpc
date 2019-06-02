@@ -31,7 +31,7 @@ docker run -d \
   --name aria2-rpc \
   -p 6800:6800 \
   -v ~/downloads:/aria2/data \
-  -v /CONFIG_DIR:/aria2/conf \
+  -v ~/.config/aria2:/aria2/conf \
   -e PUID=1000 \
   -e PGID=1000 \
   -e RPC_SECRET=skywirex \
